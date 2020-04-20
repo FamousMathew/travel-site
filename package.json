@@ -1,0 +1,35 @@
+{
+  "name": "travel-site",
+  "version": "1.0.0",
+  "description": "Website for a Travel site",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FamousMathew/travel-site.git"
+  },
+  "author": "Famous",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FamousMathew/travel-site/issues"
+  },
+  "homepage": "https://github.com/FamousMathew/travel-site#readme",
+  "devDependencies": {
+    "autoprefixer": "^9.7.6",
+    "css-loader": "^3.5.2",
+    "postcss-import": "^12.0.1",
+    "postcss-loader": "^3.0.0",
+    "postcss-nested": "^4.2.1",
+    "postcss-simple-vars": "^5.0.2",
+    "style-loader": "^1.1.4",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11"
+  },
+  "dependencies": {
+    "lodash": "^4.17.15",
+    "normalize.css": "^8.0.1"
+  }
+}
