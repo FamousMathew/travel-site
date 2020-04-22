@@ -1,0 +1,14 @@
+.text-style{
+
+    line-height: 1.65;
+    p{
+        margin-bottom: 0.625rem;
+        a{
+            font-weight: 700;
+        }
+    }
+
+    @mixin atMedium{
+        font-size: 1.125rem;
+    }
+}
