@@ -1,0 +1,60 @@
+.our-features-section{
+    &__heading{
+        font-size:2.9rem;
+        font-weight: 100;
+        text-align: center;
+        padding-bottom: 2px;;
+
+        @mixin atMedium{
+            font-size: 4.0625rem;
+        }
+    }
+
+    &__img{
+
+        display:block;
+        margin:0 auto 0.625rem  auto ;
+
+        @mixin atMedium {
+
+            display: inline;
+            margin: 0;
+
+            
+        }
+    }
+    
+}
+
+.feature{
+    position: relative;
+    &__icon{
+      
+      position: relative;
+      display: block;
+      margin: 0 auto;
+      
+
+      @mixin atMedium {
+        position: absolute;
+        top:0.9375rem;
+        left: 0;
+
+          
+      }
+    }
+
+    &__text-block{
+
+        padding-left: 0;
+        text-align: center;
+        margin-bottom: 1.875rem;
+
+        @mixin atMedium {
+
+            padding-left: 6.25rem;
+            text-align: left;
+            
+        }
+    }
+}

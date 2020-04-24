@@ -1,0 +1,51 @@
+.testimonial-item{
+    background-color: #fff;
+    padding: 0 20px 1px 20px ;
+    position: relative;
+    margin-bottom: 6.875rem;
+   
+    &--no-margin {
+        margin-bottom: 0;
+
+        @mixin atMedium {
+            margin-bottom: 6.875rem;
+        }
+    }
+    
+
+
+    
+
+    @mixin atMedium {
+      margin-bottom: 1.875rem;
+    }
+
+    &__title{
+
+        text-align: center;
+        font-size: 1.875rem;
+        color:$mainBlue;
+        margin-bottom: 0;
+        
+    }
+
+    &__sub-title{
+        text-align: center;
+        margin:0;
+        font-size: 1rem;
+        color:$mainOrange
+    }
+
+    &__img{
+ 
+        display:block;
+        margin: 0 auto -100px;
+        border-radius: 80px;
+        position: relative;
+        top:-80px;
+        
+
+    }
+  
+
+}

@@ -5,6 +5,16 @@
     margin-right: auto;
     overflow: hidden;
 
+    &--no-padding{
+
+      padding:0;
+
+      @mixin atMedium{
+        padding:0 18px;
+      }
+
+    }
+
     &--b-margin{
       margin-bottom: 1rem;
       @mixin atSmall {

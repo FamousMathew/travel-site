@@ -3,6 +3,13 @@
     @mixin clear-fix;
 
     
+    &--t-padding{
+
+        padding-top: 80px;
+     
+    }
+
+    
 
    @mixin atMedium {
 
@@ -13,6 +20,20 @@
     &__gutter > div {
         padding-right: 65px;
     }
+
+    &__gutter--large{
+
+        margin-right:-100px;
+    }
+
+
+
+    &__gutter--large > div{
+
+       padding-right: 100px;
+    }
+
+   
     &__medium-4{
 
         width: 33.33%;
@@ -21,6 +42,12 @@
         &--large{
             width:35%
         }
+    }
+
+    &__medium-6{
+
+        width: 50%;
+        float: left;
     }
 
     &__medium-8{
@@ -33,6 +60,64 @@
     }
        
    }
+
+   /*Special rule for column*/
+
+   &__gutter--small{
+    
+    @mixin atMedium {
+        margin-right:-10px;
+       }
+
+       @mixin atLarge {
+        margin-right:-45px;
+       }
+   
+    }
+
+    &__gutter--small > div{
+        
+        @mixin atMedium {
+
+    
+            padding-right: 10px;
+           
+            
+        }
+
+        @mixin atLarge {
+
+            padding-right: 45px;
+            
+        }
+
+
+
+       
+    } 
+
+   
+
+    
+
+
+}
+
+.full-length-coloumn{
+
+    @mixin atMedium {
+
+        display: flex;
+        
+    }
+
+    & > div{
+
+        float: none;
+        display: flex;
+
+    
+}
 
 
 }
