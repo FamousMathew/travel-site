@@ -1,0 +1,51 @@
+.header{
+    width: 100%;
+    background-color: rgba($mainBlue, .5);
+    position: absolute;
+    z-index: 2;
+    &__btn-container {
+        float: right;
+        padding: 10px 0;
+    }
+
+    &__logo{
+
+        position: absolute;
+        background-color: $mainBlue;
+        padding: 20px 30px;
+        left:50%;
+        transform: translateX(-50%);
+
+        @mixin atMedium {
+            padding: 25px 36px;
+            left:auto;
+            transform: translateX(0);
+        }
+    }
+
+    &__mobile{
+        width:20px;
+        height: 20px;
+        background-color: #fff;
+        position: absolute;
+        right: 10px;
+        top:10px;
+
+        @mixin atLarge{
+
+            display: none;
+
+        } 
+    }
+
+    &__large_screen{
+
+        display:none;
+
+        @mixin atMedium {
+
+            display:block;
+        }
+
+    }
+}
