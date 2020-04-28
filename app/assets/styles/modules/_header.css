@@ -1,11 +1,21 @@
 .header{
     width: 100%;
-    background-color: rgba($mainBlue, .5);
+    background-color: transparent;
     position: absolute;
     z-index: 2;
+
+    @mixin atMedium {
+        background-color: rgba($mainBlue, .5);
+    }
+    
     &__btn-container {
-        float: right;
         padding: 10px 0;
+        text-align: center;
+        
+        @mixin atMedium {
+            
+            float: right;
+        }
     }
 
     &__logo{
@@ -23,29 +33,103 @@
         }
     }
 
-    &__mobile{
-        width:20px;
-        height: 20px;
-        background-color: #fff;
-        position: absolute;
-        right: 10px;
-        top:10px;
+    
 
-        @mixin atLarge{
+    &__menu-content{
 
-            display: none;
-
-        } 
-    }
-
-    &__large_screen{
-
-        display:none;
+        opacity: 0;
+        transform: scaleY(2);
+        position: relative;
+        z-index: -10;
+        padding-top: 0px;
+        background-color: rgba($mainBlue, .5);
+        transition: all ease-out .2s;
 
         @mixin atMedium {
+            opacity: 1;
+            transform: scale(1);
+            padding-top: 0px;
+            transform: scale(1);
+        }
 
-            display:block;
+        &--is-visible{
+                opacity: 1;
+                z-index: 10;
+                transform: scale(1);
+                padding-top: 100px;
+                transform: scale(1);
+               
+            }
+
+
+    }
+}
+
+.mobile-nav{
+    
+    width:20px;
+    height: 20px;
+    position: absolute;
+    right: 10px;
+    top:10px;
+    z-index: 12;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top:0px;
+        left: 0px;
+        width: 20px;
+        height: 3px;
+        background-color: #fff;
+        transform-origin: 0 0;
+        transition: all .3s;
+    }
+
+    &--middle {
+        position: absolute;
+        top:8px;
+        left: 0px;
+        width: 20px;
+        height: 3px;
+        background-color: #fff;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom:0;
+        left: 0px;
+        width: 20px;
+        height: 3px;
+        background-color: #fff;
+        transform-origin: 0 100%;
+        transition: all .3s;
+    }
+
+     @mixin atMedium{
+
+        display: none;
+
+    } 
+
+    &--close-x{
+
+        &::before {
+            transform: rotate(45deg) scaleX(1.5) translateY(-1px);
+            
+        }
+
+        &::after {
+            
+            transform: rotate(-45deg) scaleX(1.5) translateY(1px);
+           
+        }
+
+        .mobile-nav--middle{
+            opacity: 0;
         }
 
     }
 }
+
