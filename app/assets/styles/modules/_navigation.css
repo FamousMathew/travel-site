@@ -2,17 +2,23 @@
 
     margin: 0px 0 0 0;
     text-align: center;
+    @mixin clear-fix;
    
 
     @mixin atMedium {
         float: right;
         margin: 22px 0 0 0;
+
+        &--is-current-link {
+
+            color: $mainOrange !important;
+        }
     }
 
     ul{
-        @mixin clear-fix;
         padding: 0;
         margin: 0;
+        @mixin clear-fix;
          
         
     }
